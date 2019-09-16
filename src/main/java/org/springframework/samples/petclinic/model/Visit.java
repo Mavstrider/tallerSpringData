@@ -19,8 +19,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -122,19 +120,6 @@ public class Visit extends BaseEntity {
         this.petId = petId;
     }
     
-    @OneToOne(fetch = FetchType.LAZY)
-    private Bill bill;
-
-
-	public Bill getBill() {
-		return bill;
-	}
-
-
-	public void setBill(Bill bill) {
-		this.bill = bill;
-	}
-
 
 	@Override
 	public String toString() {

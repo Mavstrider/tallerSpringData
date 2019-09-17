@@ -165,33 +165,25 @@ public class PetClinicApplication {
 				log.info("Pets: " + p);
 			}
 
-			Date date3 = Date.from(LocalDate.of(2008, 12, 31).atStartOfDay(ZoneId.systemDefault()).toInstant());
-			log.info("Criar Visitas");
-			Visit v1 = new Visit();
-			v1.setPetId(1);
-			v1.setDate(date3);
-			v1.setDescription("lala");
-
-			log.info("Persistir");
-			visitRepository.save(v1);
-
-			Visit v2 = new Visit();
-			v2.setPetId(2);
-			v2.setDate(date3);
-			v2.setDescription("dada");
-
-			log.info("Persistir");
-			visitRepository.save(v2);
-
-			Visit v3 = new Visit();
-			v3.setPetId(3);
-			v3.setDate(date3);
-			v3.setDescription("fafa");
-
-			log.info("Persistir");
-			visitRepository.save(v3);
-			
-
+			/*
+			 * Date date3 = Date.from(LocalDate.of(2008, 12,
+			 * 31).atStartOfDay(ZoneId.systemDefault()).toInstant());
+			 * log.info("Criar Visitas"); Visit v1 = new Visit(); v1.setPetId(1);
+			 * v1.setDate(date3); v1.setDescription("lala");
+			 * 
+			 * log.info("Persistir"); visitRepository.save(v1);
+			 * 
+			 * Visit v2 = new Visit(); v2.setPetId(2); v2.setDate(date3);
+			 * v2.setDescription("dada");
+			 * 
+			 * log.info("Persistir"); visitRepository.save(v2);
+			 * 
+			 * Visit v3 = new Visit(); v3.setPetId(3); v3.setDate(date3);
+			 * v3.setDescription("fafa");
+			 * 
+			 * log.info("Persistir"); visitRepository.save(v3);
+			 * 
+			 */
 			log.info("---------------*********");
 			log.info("Visitas de Mascotas");
 			for (Visit v : visitRepository.findByPetId(3)) {
